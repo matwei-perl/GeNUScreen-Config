@@ -1,0 +1,8 @@
+^\.project$
+^Build$
+^_build$
+^blib$
+^GeNUScreen-Config-
+^libgenuscreen-config-perl_
+^parse-genuscreen-cfg$
+^parse-genuscreen-config_hdf$

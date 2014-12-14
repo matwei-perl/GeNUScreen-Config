@@ -1,0 +1,14 @@
+blib/
+blib$
+_build/
+_build$
+Build$
+.cvsignore
+GeNUScreen-Config-*
+MANIFEST.bak
+MANIFEST.SKIP
+_MTN/
+_MTN$
+.mtn-ignore
+requirements.otl
+.*.swp

@@ -1,0 +1,167 @@
+Perl-Module GeNUScreen::Config
+==============================
+Requirements
+------------
+[_] Kundenperspektive
+	[_] Warum existiert dieses Projekt?
+		: - weil die Konfiguration der GeNUScreen-Paketfilter über ein
+		:   proprietäres Frondend erfolgt, und mit diesem Modul besser
+		:   analysiert werden kann
+		[_] Warum sind wir die richtigen Leute das zu machen?
+			: - weil ich Zugang zu GeNUScreen-Geräten habe
+			: - weil ich etwas Erfahrung mit Perl-Modulen habe
+		[_] Warum muss es jetzt gemacht werden?
+			: - weil demnächst ein neues Projekt mit GeNUScreen-Paketfiltern
+			:   in der KDG in Betrieb genommen werden soll und das Modul bis
+			:   dahin zum Werkzeugkasten gehören soll
+	[_] Kundengruppen
+		: Welche drei oder vier Kundengruppen können wir nehmen um die
+		: verschiedenen Kunden, die wir haben zu diskutieren?
+		: - Administratoren
+		: - Auditoren
+		: - Entwickler
+		[_] Wie unterscheiden sich ihre Bedürfnisse und ihr Verhalten?
+			Administatoren
+				: - ändern die Konfiguration von GeNUScreen
+				: - analysieren das Verhalten der Paketfilter
+				: - müssen manchmal Supportlösungen vom Hersteller
+				:   nachvollziehen
+			Auditoren
+				: - kontrollieren eine gegebene Konfiguration auf
+				:   Übereinstimmung mit Policies
+				: - bewerten Konfigurationsänderungen
+			Entwickler
+				: - schreiben eventuell Anwendungen für die GeNUScreen-
+				:   Paketfilter auf der Basis dieser Module
+	[_] Für welche Aktivitäten verwendet jede Kundengruppe unser Produkt?
+		: - Analyse von Konfigurationen
+		: - Vergleich von verschiedenen Konfigurationen
+		: - evtl. Modifikation von Konfigurationen
+	[_] Was machen die Kunden tatsächlich?
+		: (Nicht, was wir glauben oder was sie sagen, dass sie tun)
+		[_] Administratoren
+			: (ich)
+			: - Vergleich von verschiedenen Konfigurationen
+	[_] Welche Probleme haben sie, wenn sie versuchen diese Sachen zu machen?
+		: Wo bleiben sie hängen, werden verwirrt oder frustiert?
+		: - Die beiden Formen der Konfiguration (via HTTP exportierte
+		:   Konfiguration und config.hdf-Datei) sind zumindest am Anfang der
+		:   Arbeit mit den Geräten unübersichtlich und - obwohl semantisch
+		:   identisch - in der Form unterschiedlich.
+	[_] Was sollen/wollen sie tun aber können es gar nicht?
+	[_] Einfacher, sicherer, schneller, zuverlässiger
+		: Wie kann man die Dinge einfacher, sicherer, schneller oder
+		: zuverlässiger für sie machen?
+	[_] Verbesserungspotential
+		: Welche Ideen um die Situation zu verbessern haben das größte
+		: Potential?
+		: (bei dem, was die Leute tatsächlich tun)
+		: - Mit dem Einlesen der Konfiguration in eine Perl-Hash stehen alle
+		:   Sprachmittel von Perl zur Verfügung um die Konfiguration weiter zu
+		:   bearbeiten bzw. zu analysieren.
+	[_] Wie können diese Ideen erkundet werden?
+		: Welche Prototypen, Skizzen oder Alternativen müssen untersucht
+		: werden, damit wir das Potential für dieses Projekt besser verstehen?
+	[_] Kernideen und Konzepte
+		: Welche Kernideen und Konzepte sollte das Projekt verwenden um
+		: Informationen für den Kunden auszudrücken?
+[_] Geschäftliche Perspektive
+	[_] Warum wird das Projekt für unser Geschäft gebraucht?
+		: - es hilft mir die Arbeit mit den GeNUScreen-Paketfiltern besser und
+		:   schneller zu machen
+		: - das Perl-Modul erhöht - wenn gut gemacht - meine Reputation als
+		:   Perl-Programmierer
+	[_] Vermarktung
+		: Auf welcher Basis werden die Kunden dieses Produkt/Dienstleistung
+		: kaufen?
+		: - gar nicht, Open Source
+		: - die Dienstleistung "Administration GeNUScreen" kann verkauft
+		:   werden
+	[_] Was wird es kosten?
+		: (Leute/Ressourcen) Über welchen Zeitraum?
+	[_] Welches Potential für Einkünfte hat es?
+		: (oder reduzierte Betriebskosten) Über welchen Zeitraum?
+		: - vorwiegend Einsparpotential
+		: - eventuell Erhöhung meines Marktwertes
+	[_] Was machen wir nicht, so dass wir dieses Projekt machen können?
+	[_] Zeitplan
+		: Was ist der Marktzeitplan für das nächste Release oder die nächste
+		: Produkteinführung?
+		: - möglichst noch im April 2010
+[_] Technologische Perspektive
+	[_] Was muss/soll das Projekt machen?
+		: Ein Perl-Modul mit dem man
+		: - verschiedene Arten von GeNUScreen-Konfigurationen einlesen kann
+		:   (Webexport bzw. config.hdf)
+		: - verschiedene Konfigurationsdateien vergleichen kann
+	[_] Wie wird es funktionieren?
+		: Wie wird jede seiner Komponenten arbeiten?
+		: - als reines Perl-Modul
+	[_] Wie werden wir es bauen?
+		: Wie werden wir verifizieren, dass es funktioniert, wie es soll?
+		: - ein paar Konfigurationen von echten Geräten werden für Tests
+		:   herangezogen
+	[_] Welche Technologie/Architektur ist dafür für uns greifbar?
+		: Werden wir dafür auf neue/noch nicht verfügbare Technologien setzen?
+		: - Perl 5
+	[_] Entwicklungsprozesse
+		: Welche Entwicklungsprozesse und Herangehensweise sind für das Team
+		: und dieses Projekt angemessen?
+	[_] Kompetenz
+		: Welches anwendungsbereite Wissen, welche Fachkompetenz haben unsere
+		: Leute?
+		: Woran werden sie nicht arbeiten um an diesem Projekt zu arbeiten?
+		: - ich habe schon mehrere Perl-Module geschrieben
+	[_] Wie werden wir die Lücken bei der Fachkompetenz füllen?
+		: (Training/zusätzliche Einstellungen/Lernen/Ignorieren und Hoffen)
+	[_] Wieviel Zeit wird es brauchen, das zu bauen und mit welcher Qualität?
+	[_] Technologie und Erfahrung vorhanden
+		: Haben wir die Technologie und Erfahrung um etwas zu schaffen, dass
+		: diese Bedürfnisse und Probleme erfüllt?
+		: Ja.
+[_] Problembeschreibungen
+	: Je ein bis zwei Sätze, evtl. gefolgt von Belegen oder Beispielen
+	:
+	: GeNUScreen-Konfigurationen sind unübrsichtlich.
+	: - Im Webinterface auf mehrere Seiten verteilt
+	: - als Konfigurationsdatei nicht so leicht zuordenbar
+	:
+	: Konfigurationsänderungen können nicht einfach identifiziert werden.
+	: Das ergibt sich z.T. aus dem vorherigen Problem.
+	:
+	: Webexport und config.hdf-Datei können nicht miteinander verglichen
+	: werden.
+	:
+[_] Szenarien
+	: z.B. Use-Cases
+	: Jedes Szenario beschreibt etwas, was der Kunde tun kann als Ergebnis des
+	: Projekts oder die Aufgaben, die sie nicht länger tun müssen, weil das
+	: Projekt diese Aufgaben automatisiert. Die Beschreibungen sind aus
+	: Kundensicht.
+	:
+	: Fall 1:
+	: Ein Administrator nimmt eine config.hdf-Datei (via SSH geholt) und
+	: vergleicht diese mit Hilfe eines Programmes mit einer via Web
+	: exportierten Konfigurationsdatei auf Identität.
+	:
+	: Fall 2:
+	: Nach einer Supportanfrage und anschließender Konfiguration mit Hilfe des
+	: Herstellers extrahiert ein Administrator die Unterschiede gegenüber der
+	: vorherigen Konfiguration mit Hilfe eines Programmes.
+	:
+	: Fall 3:
+	: Ein Auditor läßt sich eine Konfiguration in geeigneter Form ausgeben und
+	: vergleicht sie mit einer vorgegebenen Policy.
+	:
+[_] Featurebeschreibungen
+	: Featurebeschreibungen machen klar, worauf sich das Projekt konzentriert.
+	: Sie sollten nie einen speziellen Entwurf beschreiben sondern nur den
+	: Einfluss der Lösung auf den Kunden.
+	: Die Featurebeschreibungen können grob nach Wichtigkeit sortiert werden.
+	:
+	: - Einlesen von Konfigurationen in verschiedener Ausprägung (Webexport
+	:   und config.hdf)
+	:
+	: - Ausgabe der Differenzen zwischen zwei verschiedenen Konfigurationen
+	:
+	: - Übersichtliche Ausgabe einer Konfiguration bzw. von Teilen davon
