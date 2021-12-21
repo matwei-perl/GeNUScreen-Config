@@ -6,6 +6,7 @@ Build$
 .cvsignore
 GeNUScreen-Config-*
 .git/
+.gitignore
 MANIFEST.bak
 MANIFEST.SKIP
 _MTN/
