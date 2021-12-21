@@ -5,10 +5,13 @@ _build$
 Build$
 .cvsignore
 GeNUScreen-Config-*
+.git/
 MANIFEST.bak
 MANIFEST.SKIP
 _MTN/
 _MTN$
 .mtn-ignore
+^MYMETA\.json$
+^MYMETA\.yml$
 requirements.otl
 .*.swp
