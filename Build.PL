@@ -16,7 +16,7 @@ my $builder = Module::Build->new(
     license             => 'perl',
     meta_merge => {
         resources => {
-            repository => 'https://github.com/matwei/perl-GeNUScreen-Config',
+            repository => 'https://github.com/matwei-perl/GeNUScreen-Config',
             bugtracker => 'https://rt.cpan.org/Public/Dist/Display.html?Name=GeNUScreen-Config',
         }
     },
